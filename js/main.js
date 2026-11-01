@@ -187,27 +187,27 @@ const LOADER_WORDS = ["Estudar", "Criar", "Evoluir"];
     const src = video.dataset.hls;
     if (!src) return;
 
-    // Safari e iOS tocam HLS nativamente
+    try {
+      // Primeiro tenta o hls.js (funciona em Chrome, Edge, Firefox)
+      const Hls = await loadHls();
+      if (Hls && Hls.isSupported()) {
+        const hls = new Hls({ enableWorker: true });
+        hls.loadSource(src);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => play(video));
+        hls.on(Hls.Events.ERROR, () => {
+          // mantém o fundo em gradiente
+        });
+        return;
+      }
+    } catch (error) {
+      console.warn("[vídeo de fundo]", error.message);
+    }
+
+    // Plano B: Safari e iOS tocam HLS nativamente
     if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = src;
       play(video);
-      return;
-    }
-
-    try {
-      const Hls = await loadHls();
-      if (!Hls || !Hls.isSupported()) throw new Error("HLS não suportado");
-
-      const hls = new Hls({ enableWorker: true });
-      hls.loadSource(src);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => play(video));
-      hls.on(Hls.Events.ERROR, () => {
-        // mantém o fundo em gradiente
-      });
-    } catch (error) {
-      // sem internet ou CDN bloqueado: fica o gradiente escuro por trás
-      console.warn("[vídeo de fundo]", error.message);
     }
   }
 
