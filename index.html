@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta
+      name="description"
+      content="Portfólio de Pedro Antônio da Cunha Altheman — estudante de Tecnologia da Informação em Campinas, SP. Projetos, competências, idiomas e contato."
+    />
+    <title>Pedro Altheman — Portfólio | Estudante de TI</title>
+
+    <!-- Fontes (Inter + Instrument Serif). Sem internet, o navegador usa a fonte padrão. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ======================================================= TELA DE CARREGAMENTO -->
+    <div class="loader" id="loader" aria-hidden="true">
+      <span class="loader__label">PORTFÓLIO</span>
+      <div class="loader__words"><span class="loader__word" id="loaderWord">Estudar</span></div>
+      <div class="loader__count" id="loaderCount">000</div>
+      <div class="loader__bar"><div class="loader__barFill" id="loaderBar"></div></div>
+    </div>
+
+    <!-- ====================================================================== MENU -->
+    <header class="nav-wrap">
+      <nav class="nav" id="nav">
+        <a class="nav__logo" href="#home" aria-label="Início">
+          <span class="nav__logoRing"></span>
+          <span class="nav__logoRing nav__logoRing--hover"></span>
+          <span class="nav__logoText">PA</span>
+        </a>
+
+        <span class="nav__divider"></span>
+
+        <div class="nav__links">
+          <a class="nav__link is-active" href="#home">Início</a>
+          <a class="nav__link" href="#sobre">Sobre</a>
+          <a class="nav__link" href="#projetos">Projetos</a>
+          <a class="nav__link" href="#contato">Contato</a>
+        </div>
+
+        <span class="nav__divider nav__divider--cta"></span>
+
+        <!-- ⚠️ troque o e-mail aqui (e nos outros 3 lugares marcados com E-MAIL) -->
+        <a class="nav__cta" href="mailto:seu.email@exemplo.com">
+          <span class="nav__ctaRing"></span>
+          <span class="nav__ctaText">Fale comigo <i>↗</i></span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===================================================================== HERO -->
+      <section class="hero" id="home">
+        <div class="hero__media">
+          <div class="hero__fallback"></div>
+          <video
+            class="hero__video"
+            id="bgVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            data-hls="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8"
+          ></video>
+        </div>
+        <div class="hero__scrim"></div>
+        <div class="hero__glow"></div>
+        <div class="hero__bottomFade"></div>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-anim="blur">PORTFÓLIO • 2026</p>
+
+          <h1 class="hero__name" data-anim="name">Pedro Altheman</h1>
+
+          <p class="hero__role" data-anim="blur">
+            Sou <em class="hero__roleWord" id="roleWord">estudante de TI</em> e moro em Campinas – SP.
+          </p>
+
+          <p class="hero__desc" data-anim="blur">
+            Gosto de programação, de desenvolvimento de projetos e de explorar diferentes ferramentas
+            tecnológicas — sempre em busca de aprender, criar e evoluir.
+          </p>
+
+          <div class="hero__actions" data-anim="blur">
+            <a class="btn btn--solid" href="#projetos">Ver projetos</a>
+            <a class="btn btn--outline" href="#sobre">Sobre mim</a>
+          </div>
+        </div>
+
+        <div class="hero__scroll">
+          <span class="hero__scrollLabel">Scroll</span>
+          <span class="hero__scrollLine"><i></i></span>
+        </div>
+      </section>
+
+      <!-- ==================================================================== SOBRE -->
+      <section class="section" id="sobre">
+        <div class="container">
+          <header class="section__head reveal">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span>Sobre mim</span></div>
+            <h2 class="section__title">Minha <em>trajetória</em></h2>
+            <p class="section__sub">
+              Um pouco sobre quem eu sou, de onde venho e o que venho construindo na área de tecnologia.
+            </p>
+          </header>
+
+          <div class="about">
+            <figure class="about__photo reveal">
+              <img src="images/foto-1.jpg" alt="Retrato de Pedro Altheman" loading="lazy" />
+              <div class="about__photoFade"></div>
+              <span class="about__photoLine"></span>
+              <figcaption class="about__photoCaption">
+                <strong>Pedro Altheman</strong>
+                <span>16 anos • Campinas – SP</span>
+              </figcaption>
+            </figure>
+
+            <div class="about__body">
+              <p class="reveal">
+                Sou estudante do 2º ano do Ensino Médio Técnico em Tecnologia da Informação e tenho
+                grande interesse pela área de tecnologia. Busco constantemente adquirir novos
+                conhecimentos, desenvolver minhas habilidades e aprimorar minhas capacidades.
+              </p>
+              <p class="reveal">
+                Gosto de trabalhar com programação, desenvolvimento de projetos e diferentes ferramentas
+                tecnológicas — é nesse espaço entre a lógica e a criatividade que eu me encontro.
+              </p>
+
+              <div class="card card--edu reveal">
+                <div class="eyebrow"><span class="eyebrow__line"></span><span>Formação acadêmica</span></div>
+                <h3>Instituto Educacional Raphael Di Santo</h3>
+                <p class="card--edu__course">Ensino Médio Técnico em Tecnologia da Informação</p>
+                <span class="badge"><i></i>2º ano — cursando</span>
+                <p class="card--edu__note">
+                  Formação técnica integrada ao Ensino Médio, com contato com programação, sistemas,
+                  manutenção e suporte.
+                </p>
+              </div>
+
+              <ul class="facts reveal">
+                <li><strong>16</strong><span>Anos de idade</span></li>
+                <li><strong>2º</strong><span>Ano do EM Técnico</span></li>
+                <li><strong>6</strong><span>Competências técnicas</span></li>
+                <li><strong>2</strong><span>Projetos em destaque</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================= COMPETÊNCIAS -->
+      <section class="section" id="competencias">
+        <div class="container">
+          <header class="section__head reveal">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span>Competências</span></div>
+            <h2 class="section__title">Competências &amp; <em>habilidades</em></h2>
+            <p class="section__sub">
+              As áreas que venho desenvolvendo ao longo do curso técnico — da lógica de programação ao
+              suporte ao usuário.
+            </p>
+          </header>
+
+          <figure class="banner reveal">
+            <img
+              src="images/foto-2.jpg"
+              alt="Ilustração com as áreas de atuação em tecnologia: programação, suporte, manutenção, sistemas, aplicativos e redação"
+              loading="lazy"
+            />
+            <div class="banner__fade"></div>
+          </figure>
+
+          <ul class="skills">
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 7 4 12 9 17" /><polyline points="15 7 20 12 15 17" /></svg>
+              </span>
+              <h3>Programação</h3>
+              <p>Lógica, estrutura de código e criação de sites e jogos na prática.</p>
+            </li>
+
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1" /><path d="M4 13h3v6H6a2 2 0 0 1-2-2v-4Z" /><path d="M20 13h-3v6h1a2 2 0 0 0 2-2v-4Z" /></svg>
+              </span>
+              <h3>Atendimento e suporte</h3>
+              <p>Apoio a usuários, escuta ativa e resolução de problemas do dia a dia.</p>
+            </li>
+
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" /></svg>
+              </span>
+              <h3>Configuração de aplicativos</h3>
+              <p>Operação, instalação e ajuste de aplicativos e ferramentas de software.</p>
+            </li>
+
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></svg>
+              </span>
+              <h3>Manutenção de computadores</h3>
+              <p>Instalação, formatação e cuidados com hardware e periféricos.</p>
+            </li>
+
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3" /><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" /><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" /></svg>
+              </span>
+              <h3>Sistemas de tecnologia</h3>
+              <p>Uso de sistemas operacionais e ambientes de trabalho computacionais.</p>
+            </li>
+
+            <li class="skill reveal">
+              <span class="skill__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z" /><path d="M14 3v4h4" /><path d="M9.5 13h6M9.5 17h4" /></svg>
+              </span>
+              <h3>Redação</h3>
+              <p>Escrita clara para trabalhos, apresentações e documentação de projetos.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================================================================== PROJETOS -->
+      <section class="section" id="projetos">
+        <div class="container">
+          <header class="section__head reveal">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span>Projetos</span></div>
+            <h2 class="section__title">Projetos em <em>destaque</em></h2>
+            <p class="section__sub">
+              Os dois trabalhos que desenvolvi do início ao fim: um site para uma proposta de empresa e
+              um jogo 2D autoral.
+            </p>
+          </header>
+
+          <div class="projects">
+            <!-- ----------------------------- PROJETO 1: CAPITAL IQ -->
+            <article class="project project--wide reveal">
+              <div class="project__media project__media--light">
+                <img src="images/foto-3.jpg" alt="Logotipo do projeto Capital IQ, com o subtítulo Inteligência Financeira" loading="lazy" />
+              </div>
+              <div class="project__body">
+                <p class="project__kind">Projeto de empresa • Desenvolvimento web</p>
+                <h3 class="project__title">Capital IQ</h3>
+                <p class="project__desc">
+                  Desenvolvimento de um projeto de empresa chamado Capital IQ, incluindo a criação de um
+                  site com diferentes funcionalidades e recursos. O trabalho envolveu conhecimentos de
+                  programação, desenvolvimento web e organização de interfaces.
+                </p>
+                <ul class="tags">
+                  <li>Desenvolvimento web</li>
+                  <li>Programação</li>
+                  <li>Interfaces</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- ---------------------------- PROJETO 2: BLOCK RUNNER -->
+            <article class="project project--narrow reveal">
+              <div class="project__media project__media--dark">
+                <img src="images/foto-4.jpg" alt="Logotipo do jogo Block Runner, em estilo pixel art inspirado em Minecraft" loading="lazy" />
+                <span class="halftone"></span>
+              </div>
+              <div class="project__body">
+                <p class="project__kind">Jogo autoral • Aventura 2D</p>
+                <h3 class="project__title">Block Runner</h3>
+                <p class="project__desc">
+                  Jogo próprio criado para integrar uma plataforma de jogos desenvolvida por um professor.
+                  Block Runner traz uma proposta de aventura e corrida em 2D, com mecânicas próprias e
+                  elementos inspirados no universo de Minecraft.
+                </p>
+                <ul class="tags">
+                  <li>Game design</li>
+                  <li>Programação</li>
+                  <li>Mecânicas 2D</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================== OUTROS TRABALHOS -->
+      <section class="section" id="outros">
+        <div class="container">
+          <header class="section__head reveal">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span>Outros trabalhos</span></div>
+            <h2 class="section__title">Além dos <em>projetos</em></h2>
+            <p class="section__sub">
+              Trabalhos escolares e atividades complementares que também fizeram parte da minha formação
+              em tecnologia.
+            </p>
+          </header>
+
+          <ul class="works">
+            <li class="work reveal">
+              <img src="images/foto-5.jpg" alt="" loading="lazy" />
+              <div class="work__text">
+                <h3>Apresentações digitais criadas no Canva</h3>
+                <p><span>Trabalho escolar</span><i></i><span class="work__tag">Design</span></p>
+              </div>
+              <span class="work__pill">Design</span>
+            </li>
+
+            <li class="work reveal">
+              <img src="images/foto-6.jpg" alt="" loading="lazy" />
+              <div class="work__text">
+                <h3>Atividades práticas de programação</h3>
+                <p><span>Trabalho escolar</span><i></i><span class="work__tag">Código</span></p>
+              </div>
+              <span class="work__pill">Código</span>
+            </li>
+
+            <li class="work reveal">
+              <img src="images/foto-7.jpg" alt="" loading="lazy" />
+              <div class="work__text">
+                <h3>Trabalhos escolares de tecnologia</h3>
+                <p><span>Trabalho escolar</span><i></i><span class="work__tag">TI</span></p>
+              </div>
+              <span class="work__pill">TI</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========================================================== IDIOMAS E CURSOS -->
+      <section class="section" id="idiomas">
+        <div class="container">
+          <header class="section__head reveal">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span>Idiomas &amp; cursos</span></div>
+            <h2 class="section__title">Idiomas e <em>cursos</em></h2>
+            <p class="section__sub">
+              Comunicação e formação complementar que acompanham o desenvolvimento técnico.
+            </p>
+          </header>
+
+          <div class="langs">
+            <div class="card reveal">
+              <div class="eyebrow"><span class="eyebrow__line"></span><span>Idiomas</span></div>
+
+              <div class="lang">
+                <div class="lang__head"><strong>Português</strong><span>Nativo</span></div>
+                <div class="lang__bar"><i style="--value: 100%"></i></div>
+              </div>
+
+              <div class="lang">
+                <div class="lang__head"><strong>Inglês</strong><span>Básico</span></div>
+                <div class="lang__bar"><i style="--value: 35%"></i></div>
+              </div>
+            </div>
+
+            <div class="card reveal">
+              <div class="eyebrow"><span class="eyebrow__line"></span><span>Cursos complementares</span></div>
+              <h3>Curso de Inglês</h3>
+              <p class="card__meta"><span>Fisk</span><i></i><span>8 meses</span></p>
+              <p class="card__note">Curso complementar de idioma com duração de 8 meses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================== CONTATO -->
+      <section class="contact" id="contato">
+        <div class="contact__media">
+          <div class="hero__fallback"></div>
+          <video
+            class="hero__video hero__video--flip"
+            id="bgVideo2"
+            autoplay
+            muted
+            loop
+            playsinline
+            data-hls="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8"
+          ></video>
+        </div>
+        <div class="contact__scrim"></div>
+
+        <div class="contact__inner">
+          <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+              <div class="marquee__group">
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+              </div>
+              <div class="marquee__group">
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+                <span>EM BUSCA DE OPORTUNIDADES •</span><span>EM BUSCA DE OPORTUNIDADES •</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__cta">
+            <h2 class="section__title">Vamos <em>conversar</em>?</h2>
+            <p>
+              Estou em busca da minha primeira oportunidade na área de tecnologia. Se quiser trocar uma
+              ideia sobre um projeto, um estágio ou uma vaga, meu e-mail está aberto.
+            </p>
+            <!-- E-MAIL -->
+            <a class="btn btn--solid" href="mailto:seu.email@exemplo.com">seu.email@exemplo.com →</a>
+            <span class="contact__location">Jardim Garcia, Campinas – SP</span>
+          </div>
+
+          <footer class="footer">
+            <div class="footer__top">
+              <nav class="footer__nav">
+                <a href="#home">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <!-- E-MAIL -->
+                <a href="mailto:seu.email@exemplo.com">E-mail</a>
+              </nav>
+
+              <div class="footer__status">
+                <span class="dot"><i></i></span>
+                Em busca de oportunidades
+              </div>
+            </div>
+
+            <div class="footer__bottom">
+              <span>© <span id="year">2026</span> Pedro Antônio da Cunha Altheman</span>
+              <span>Estudante de Tecnologia da Informação</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js" defer></script></body>
+</html>
